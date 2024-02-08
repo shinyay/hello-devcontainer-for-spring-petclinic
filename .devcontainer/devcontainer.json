@@ -1,0 +1,67 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/java
+{
+	"name": "Java for Spring Boot",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	// "image": "mcr.microsoft.com/devcontainers/java:1-21-bullseye",
+	"service": "java-for-spring",
+	"dockerComposeFile" : "./compose.yaml",
+	"shutdownAction": "stopCompose",
+	"workspaceFolder": "/work",
+
+	"features": {
+		"ghcr.io/devcontainers/features/java:1": {
+			"version": "none",
+			"installMaven": "false",
+			"installGradle": "true"
+		},
+		"ghcr.io/devcontainers-contrib/features/springboot-sdkman:2": {
+			"version": "latest",
+			"jdkVersion": "latest",
+			"jdkDistro": "open"
+		}
+	},
+
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				// Spring Boot Extension Pack
+				"vmware.vscode-boot-dev-pack",
+				// Spring Initializr Java Support
+				"vscjava.vscode-spring-initializr",
+				// Gradle for Java
+				"vscjava.vscode-gradle",
+				// Git Graph of your repository
+				"mhutchie.git-graph"
+			],
+			"settings": {
+				"editor.formatOnSave": true,
+				"workbench.colorCustomizations": {
+                    "titleBar.activeBackground": "#19549C",
+                    "titleBar.activeForeground": "#ffffff",
+                    "activityBar.background": "#02A7E3",
+                    "activityBar.foreground": "#ffffff"					
+				}
+			}
+		}
+	},
+
+	// Default options for ports, port ranges, and hosts that aren’t configured using portsAttributes.
+	"otherPortsAttributes": {
+		"onAutoForward": "ignore"
+	},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	"forwardPorts": [8080],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "java -version",
+
+	// Configure tool-specific properties.
+	// "customizations": {},
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "root"
+}
