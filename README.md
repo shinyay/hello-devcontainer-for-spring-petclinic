@@ -1,6 +1,6 @@
-# Getting started with Dev Container for Spring Boot
+# Getting started with Dev Container for Spring Pet Clinic
 
-Overview
+This project uses Dev Containers to develop Spring Pet Clinic.
 
 ## Description
 
