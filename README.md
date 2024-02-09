@@ -4,12 +4,10 @@ This project uses Dev Containers to develop Spring Pet Clinic.
 
 ## Description
 
+- [spring-projects/spring-petclinic](https://github.com/spring-projects/spring-petclinic)
+
 ## Demo
 
-```shell
-spring init --type gradle-project-kotlin -j 21 -d web -n spring-app spring init --type gradle-project-kotlin --language kotlin -j 21 -d web -n spr
-ing-app spring-app
-```
 
 ## Features
 
